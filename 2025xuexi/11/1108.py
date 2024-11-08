@@ -21,9 +21,18 @@ list2=['b','a','v','654','234']
 
 
 #方法二：
-list4=set(list1+list2)
-list_qc=[]
-for i in list4:
-    if i in list1  and i in list2:
-        list_qc.append(i)
-print(list_qc)
+# list4=set(list1+list2)
+# list_qc=[]
+# for i in list4:
+#     if i in list1  and i in list2:
+#         list_qc.append(i)
+# print(list_qc)
+
+
+#方法三
+# list_new=set(list1)&set(list2)
+# print(list_new)
+
+#方法四
+list_new=[item for item in list1 if item in list2]
+print(list_new)
