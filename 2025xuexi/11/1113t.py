@@ -25,32 +25,32 @@ grades_data = '''
 }
 '''
 # 方法一：
-# s_data=json.loads(students_data)
-# g_data=json.loads(grades_data)
-#
-# total=[]
-# student={}
-#
-# for s in s_data['students']:
-#     # print(s)
-#     u = {}
-#
-#
-#
-#     student=s
-#     score={}
-#     for g in g_data['grades']:
-#
-#         if s['id']==g['student_id']:
-#             # a=s['id']
-#
-#             score[g['subject']]=g['score']
-#     print(score)
-#     student['score']=score
-#     # print(u)
-#
-#     total.append(student)
-# print(total)
+s_data=json.loads(students_data)
+g_data=json.loads(grades_data)
+
+total=[]
+student={}
+
+for s in s_data['students']:
+    # print(s)
+    u = {}
+
+
+
+    student=s
+    score={}
+    for g in g_data['grades']:
+
+        if s['id']==g['student_id']:
+            # a=s['id']
+
+            score[g['subject']]=g['score']
+    print(score)
+    student['score']=score
+    # print(u)
+
+    total.append(student)
+print(total)
 
 # 方案二
 # 解析 JSON 数据
