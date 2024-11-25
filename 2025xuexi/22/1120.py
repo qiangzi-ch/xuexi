@@ -67,7 +67,8 @@ with open('335.txt','a') as ww:
 ##writelines()方法使用
 
 with open('432.txt','w') as ws:
-    ##该方法每次只写入一行数据，注意当写入的数据重复时，会覆盖原有数据
+
+    ##该方法只接受一个列表数据进行写入
     lst=['用例名称','前置条件','执行步骤','预期结果','实际结果']
     lst1=[x+',' for x in lst[:-1]]+[lst[-1]]
     ws.writelines(lst1)
