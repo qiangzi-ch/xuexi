@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-#Author:changchuchu
+
 @File ：1112t.py
 @Time ： 2024/11/13 11:03
 """
@@ -25,10 +25,21 @@
 # print(word_count(s))
 
 # 方法二
-from collections import Counter
+# from collections import Counter
+#
+# def word_count(s:str)->dict:
+#     return dict(Counter(s.split()))
+# s = "hello world hello"
+# print(word_count(s))
 
-def word_count(s:str):
-    return dict(Counter(s.split()))
+#方法三
+def word_count(s:str)->dict:
+    words=s.split()
+    words_count={}
+    for w in words:
+        words_count[w]=words.count(w)
+
+    return words_count
+
 s = "hello world hello"
 print(word_count(s))
-
